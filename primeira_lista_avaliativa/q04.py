@@ -11,10 +11,10 @@ def check_num(num):
         return 0
     
 def check_range(num_min, num_max):
-    prime_numbers = []
-    
+    while num_min <= num_max:
+        if check_num(num_min):
+            print(num_min)
+        num_min += 1
         
     
-    return prime_numbers
-
-print(check_range(1, 14))
+check_range(1, 14)
