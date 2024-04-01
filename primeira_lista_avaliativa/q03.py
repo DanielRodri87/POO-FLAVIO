@@ -35,6 +35,6 @@ while True:
         else:
             print("Valor inválido, digite novamente")
     except:
-        print("Houve alguma entrada inválida, o que impossibilitou o cálculo do fatorial")
+        print("Houve alguma entrada inválida, o que impossibilitou o cálculo")
 
     
