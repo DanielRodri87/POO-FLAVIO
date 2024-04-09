@@ -1,4 +1,4 @@
-import functools as iagopifio
+import functools as ft
 
 def ispar(x):
     if x % 2 == 0:
@@ -18,8 +18,8 @@ def maior(x, y):
 lista = [1,2,3,4,5,68,7,8,9,10]
 
 lista_pares = list(filter(ispar, lista))
-maior1 = iagopifio.reduce(maior, lista)
-soma = iagopifio.reduce(somar, lista_pares)
+maior1 = ft.reduce(maior, lista)
+soma = ft.reduce(somar, lista_pares)
 
 print(soma)
 print(maior1)
