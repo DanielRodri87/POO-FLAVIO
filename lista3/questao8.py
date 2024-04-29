@@ -7,6 +7,9 @@
 
 import random as rd
 bilhete_sorteado = []
+bilhete1 = []
+bilhete2 = []
+bilhete3 = []
 
 count = 0
 acerto1 = 0
@@ -18,9 +21,12 @@ while count < 13:
     bilhete_sorteado.append(num)
     count += 1
     
-bilhete1 = [1,2,2,3,3,2,1,3,1,2,2,2,3]
-bilhete2 = [2,2,2,3,3,1,1,2,1,2,1,3,3]
-bilhete3 = [3,1,1,1,3,2,1,3,2,3,2,2,1]
+for i in range(13):
+    bilhete1.append(rd.randint(1, 3))
+    bilhete2.append(rd.randint(1, 3))
+    bilhete3.append(rd.randint(1, 3))
+
+    
 
 for i in range(len(bilhete_sorteado)):
     if bilhete1[i] == bilhete_sorteado[i]:
@@ -29,6 +35,8 @@ for i in range(len(bilhete_sorteado)):
         acerto2 += 1
     elif bilhete3[i] == bilhete_sorteado[i]:
         acerto3 += 1
+        
+print(bilhete1, bilhete2, bilhete3)
         
 if acerto1 == 13:
     print("Apostador 1: Ganhador")
