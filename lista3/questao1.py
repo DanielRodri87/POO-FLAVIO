@@ -3,7 +3,10 @@
 # usar a função len(). 
 
 def TamString(S):
-    return len(S)
+    cont = 0
+    for i in S:
+        cont += 1
+    return cont
 
 palavra = input("Informe a palavra: ")
 print(f"O tamanho é: {TamString(palavra)}")

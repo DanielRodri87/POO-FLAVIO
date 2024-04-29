@@ -14,7 +14,7 @@ for i in range(10):
     lista2.append(int(input(f"Informe o {i+1}° valor: ")))
 
 for i in range(0, 10):
-    lista3[i] = lista1[i] * lista2[i]
+    lista3.append(lista1[i]*lista2[i])
     
 print(lista1)
 print(lista2)
