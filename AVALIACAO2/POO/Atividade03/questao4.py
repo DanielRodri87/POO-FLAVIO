@@ -63,6 +63,10 @@ class ControleRemoto:
     def __init__(self, televisao):
         self._televisao = televisao
         
+    @property
+    def televisao(self):
+        return self._televisao
+        
     def menu(self):
         while True:
             print("1. Aumentar volume")
@@ -75,20 +79,20 @@ class ControleRemoto:
             print("0. Sair")
             opcao = int(input("Escolha uma opção: "))
             if opcao == 1:
-                self._televisao.aumenta_volume()
+                self.televisao.aumenta_volume()
             elif opcao == 2:
-                self._televisao.diminui_volume()
+                self.televisao.diminui_volume()
             elif opcao == 3:
-                self._televisao.aumenta_canal()
+                self.televisao.aumenta_canal()
             elif opcao == 4:
-                self._televisao.diminui_canal()
+                self.televisao.diminui_canal()
             elif opcao == 5:
                 canal = int(input("Digite o canal: "))
-                self._televisao.troca_canal(canal)
+                self.televisao.troca_canal(canal)
             elif opcao == 6:
-                self._televisao.consulta_volume()
+                self.televisao.consulta_volume()
             elif opcao == 7:
-                self._televisao.consulta_canal()
+                self.televisao.consulta_canal()
             elif opcao == 0:
                 break
             else:
